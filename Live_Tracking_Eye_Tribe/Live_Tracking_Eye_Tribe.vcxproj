@@ -10,6 +10,22 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\gazeapi.h" />
+    <ClInclude Include="include\gazeapi_interfaces.h" />
+    <ClInclude Include="include\gazeapi_types.h" />
+    <ClInclude Include="src\gazeapi_observable.hpp" />
+    <ClInclude Include="src\gazeapi_parser.hpp" />
+    <ClInclude Include="src\gazeapi_socket.hpp" />
+    <ClInclude Include="src\graphics.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\EyeTracker.cpp" />
+    <ClCompile Include="src\gazeapi.cpp" />
+    <ClCompile Include="src\gazeapi_parser.cpp" />
+    <ClCompile Include="src\gazeapi_socket.cpp" />
+    <ClCompile Include="src\winbgi.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6E93B424-2440-49FD-B1F5-596655EAE562}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -41,6 +57,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\Projects\Git\tet-cpp-client\include\;C:\Program Files\boost\boost_1_57_0\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -52,11 +70,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>
+      </SDLCheck>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\boost\boost_1_57_0\stage\lib\;C:\Program Files\boost\boost_1_57_0\libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -77,8 +97,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
