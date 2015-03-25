@@ -1,5 +1,7 @@
-C++ SDK for The Eye Tribe Tracker
+This demo application uses C++ SDK for The Eye Tribe Tracker
 ====
+The complete content of this README file is taken from  The Eye Tribe Tracker README file.
+Eye Tribe C++ SDK: https://github.com/EyeTribe/tet-cpp-client
 
 Introduction
 ----
