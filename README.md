@@ -84,6 +84,6 @@ Changelog
 WinBGIm Graphics Library
 ----
 
-This example application could use *WinBGIm Graphics Library* with the implementation provided by Michael Main (main@colorado.edu).
+This example application uses *WinBGIm Graphics Library*, an implementation provided by Michael Main (main@colorado.edu).
 For more details please visit - [Using the WinBGIm Graphics Library](http://www.cs.colorado.edu/~main/bgi/)
 For 
